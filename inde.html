@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Study Planner</title>
+
+    <link rel="stylesheet" href="sty.css">
+</head>
+
+<body>
+
+    <div class="planner">
+
+        <h1>📚 Study Planner</h1>
+
+        <p class="subtitle">
+            Plan your studies and achieve your goals!
+        </p>
+
+        <div class="input-area">
+
+            <input type="text" id="subject"
+            placeholder="Enter subject name">
+
+            <input type="text" id="topic"
+            placeholder="Enter study topic">
+
+            <input type="date" id="studyDate">
+
+            <button onclick="addStudy()">Add Task</button>
+
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="search"
+            placeholder="Search subjects or topics..."
+            oninput="displayStudies()">
+        </div>
+
+        <div class="filters">
+
+            <button onclick="setFilter('all')">All</button>
+
+            <button onclick="setFilter('completed')">
+                Completed
+            </button>
+
+            <button onclick="setFilter('pending')">
+                Pending
+            </button>
+
+        </div>
+
+        <div class="progress-box">
+
+            <h3>Study Progress</h3>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <p id="progressText">0% Completed</p>
+
+        </div>
+
+        <ul id="studyList"></ul>
+
+        <div class="status">
+
+            <span id="count">Total Tasks: 0</span>
+
+            <button class="clear" onclick="clearStudies()">
+                Clear All
+            </button>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Student Study Planner</p>
+        <p>© 2026 All Rights Reserved</p>
+    </footer>
+
+    <script src="scri.js"></script>
+
+</body>
+</html>
